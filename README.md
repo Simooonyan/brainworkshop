@@ -39,3 +39,7 @@ Press S for a position match for the square. For example, for dual position 2 ba
 
 
 ![](Image/screen5.png)
+
+
+
+The interference is highest when both the grid and the square are at the same position.
