@@ -2312,7 +2312,7 @@ class Visual:
                     self.square.delete()
                 else:
                     self.square.batch = None
-                    if 'position2' in mode.modalities[mode.mode]:
+                    if 'position2' and 'position1' in mode.modalities[mode.mode]:
                         self.smallv_lines.delete()
                     pyglet.clock.unschedule(self.animate_square)
             self.visible = False
@@ -3956,7 +3956,7 @@ def generate_stimulus():
                  mode.current_stim['color'], mode.current_stim['vis'], \
                  mode.current_stim['number'], mode.current_operation, variable)
     if multi == 1:
-        if 'position2' in mode.modalities[mode.mode]:  #initiate dual position n back mode
+        if 'position2' and 'position1' in mode.modalities[mode.mode]:  #initiate dual position n back mode
             
             visuals[0].spawnDual(mode.current_stim['position1'], mode.current_stim['position2'] )
         else:
